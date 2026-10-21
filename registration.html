@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Inquiry Form | Hussnain Sarwar Portfolio</title>
+  <!-- Page 3: Form. CSS method used on this page: EXTERNAL CSS only (style.css). -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header>
+    <h1>Project Inquiry</h1>
+    <p>Hussnain Sarwar | Web Developer Portfolio</p>
+  </header>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="information.html">Projects &amp; Services</a>
+    <a href="registration.html" class="current">Project Inquiry</a>
+  </nav>
+
+  <main>
+    <h2>Tell Me About Your Project</h2>
+    <p class="intro">Create an account and send your inquiry. Fields marked with * are required. This is a front-end demo, so no data is sent anywhere.</p>
+
+    <!-- Inquiry form: no server-side processing required -->
+    <form id="registration-form" action="#" method="post">
+
+      <!-- Account creation area -->
+      <fieldset>
+        <legend>Account Details</legend>
+
+        <label for="fullname">Full Name *</label>
+        <input type="text" id="fullname" name="fullname" placeholder="e.g. Sara Ahmed" required>
+
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="name@example.com" required>
+
+        <label for="password">Password * (minimum 8 characters)</label>
+        <input type="password" id="password" name="password" minlength="8" placeholder="At least 8 characters" required>
+
+        <label for="age">Age (18 to 80)</label>
+        <input type="number" id="age" name="age" min="18" max="80" placeholder="18">
+      </fieldset>
+
+      <!-- Project details -->
+      <fieldset>
+        <legend>Project Details</legend>
+
+        <label for="service">Service Needed *</label>
+        <select id="service" name="service" required>
+          <option value="" selected disabled>-- Select a service --</option>
+          <option value="portfolio">Portfolio Website</option>
+          <option value="business">Business Website</option>
+          <option value="figma">UI Design in Figma</option>
+          <option value="system">Management System (Python and SQL)</option>
+        </select>
+
+        <label for="date">Preferred Start Date</label>
+        <input type="date" id="date" name="start_date">
+
+        <!-- Radio group: only one option can be selected -->
+        <p class="group-title">Budget Range</p>
+        <div class="option-row">
+          <input type="radio" id="budget-low" name="budget" value="low" checked>
+          <label for="budget-low" class="inline">Below PKR 30,000</label>
+        </div>
+        <div class="option-row">
+          <input type="radio" id="budget-high" name="budget" value="high">
+          <label for="budget-high" class="inline">PKR 30,000 or more</label>
+        </div>
+
+        <!-- Independent checkboxes -->
+        <p class="group-title">Extra Features</p>
+        <div class="option-row">
+          <input type="checkbox" id="feat-seo" name="features" value="seo">
+          <label for="feat-seo" class="inline">SEO setup</label>
+        </div>
+        <div class="option-row">
+          <input type="checkbox" id="feat-logo" name="features" value="logo">
+          <label for="feat-logo" class="inline">Logo design</label>
+        </div>
+        <div class="option-row">
+          <input type="checkbox" id="feat-host" name="features" value="hosting">
+          <label for="feat-host" class="inline">Hosting help</label>
+        </div>
+      </fieldset>
+
+      <!-- Additional information -->
+      <fieldset>
+        <legend>Additional Information</legend>
+        <label for="comments">Comments (maximum 300 characters)</label>
+        <textarea id="comments" name="comments" rows="5" maxlength="300" placeholder="Describe your project idea..."></textarea>
+      </fieldset>
+
+      <div class="buttons">
+        <button type="submit">Submit Inquiry</button>
+        <button type="reset" class="secondary">Reset Form</button>
+      </div>
+    </form>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>Contact: <a href="mailto:hassnainsarwar478@gmail.com">hassnainsarwar478@gmail.com</a></p>
+    <p>&copy; 2026 Hussnain Sarwar. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
